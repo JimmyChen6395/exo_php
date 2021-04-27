@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- EXERCICE 001 -->
+<p>EXERCICE 001</p>
 
     <?php
         $a = 3;
@@ -29,7 +29,7 @@
 
 
 
-<!-- EXERCICE 002 -->
+<p>EXERCICE 002</p>
 
     <?php
         $Nom = "Marie";
@@ -59,7 +59,7 @@
 
 
 
-<!-- EXERCICE 003 -->
+<p>EXERCICE 003</p>
    
     <?php 
         $personne = [
@@ -75,7 +75,7 @@
     ?>
 
 
-<!-- EXERCICE 004 -->
+<p>EXERCICE 004</p>
 
 <?php
     $nombre = rand(1,20);
@@ -94,7 +94,7 @@
     }
 ?>
 
-<!-- EXERCICE 005 -->
+<p>EXERCICE 005</p>
 <?php
     $nombre1 = rand(1,100);
     $nombre2 = rand(1,100);
@@ -109,13 +109,13 @@
     }
 ?>
 
-<!-- EXERCICE 006 -->
+<p>EXERCICE 006</p>
 
 <?php
     $month = ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Décembre"];
     $number = rand(1,12);
 
-    switch($choix){
+    switch($number){
         case 1 : 
           echo  "<p>Le mois $number correspond au mois de $month[0]";
         break;
@@ -156,7 +156,7 @@
 ?>
 
 
-<!-- EXERCICE 007 -->
+<p>EXERCICE 007</p>
 <table border="">
         <tr>
         <th>Nombre</th>
@@ -176,7 +176,7 @@
 </table>
 
 
-<!-- EXERCICE 008 -->
+<p>EXERCICE 008</p>
 <?php
         $n= rand(5,15);
         $etape = 0;
@@ -190,7 +190,7 @@
     ?>
 
 
-<!-- EXERCICE 009 -->
+<p>EXERCICE 009</p>
 
 <?php
         $essai = 0;
@@ -204,41 +204,7 @@
     ?>
 
 
-<!-- EXERCICE 010 -->
-<?php
-        $noteDeGuy = [];
-        $note = 0;
-        do{
-            $note ++;
-            $n = rand(1,20);
-            $noteDeGuy['note n°'.$note] = $n;
-    }while(count($noteDeGuy)<20);
-    print_r($noteDeGuy);
-    $nbreNotes = count($noteDeGuy);
-    $noteMax = 20;
-    $additionNotes = array_sum($noteDeGuy);
-    $additionNotesMax = $nbreNotes *$noteMax;
-    $moyenneNotes = $additionNotes / $additionNotesMax *100;
-
-    if($moyenneNotes >= 0 && $moyenneNotes <= 30){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes :  Ca ira mieux l'année prochaine !!!";
-    }
-    else if ($moyenneNotes >= 30 && $moyenneNotes <= 50){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes : Voilà pourquoi il ne faut pas regarder des streams jv durant les cours!</p>";
-    }
-    else if ($moyenneNotes >= 50 && $moyenneNotes <= 60){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes : Pas de bol, t'y étais presque !!!</p>";
-    }
-    else if ($moyenneNotes >= 60 && $moyenneNotes <= 70){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes : Ca passe... Sans classe, mais ça passe !!!</p>";
-    }
-    else if ($moyenneNotes >= 70 && $moyenneNotes <= 80){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes : Bien joué, objectif atteint !!!</p>";
-    }
-    else if ($moyenneNotes >= 80 && $moyenneNotes <= 100){
-        echo "<p style = 'font-weight : bold;'>La moyenne de l'année est de $moyenneNotes : Master Class, 5 étoiles pour toi</p>";
-    }
-    ?>
+<p>EXERCICE 010</p>
 
 
 </body>
