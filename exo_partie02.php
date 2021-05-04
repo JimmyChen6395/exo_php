@@ -34,5 +34,96 @@
 
         calcul(rand(0,10),rand(0,10),rand(0,10))
     ?>
+
+    <h1>EXERCICE 12</h1>
+    <?php 
+    
+        $guy = [
+            'nom' => 'Guy',
+            'age' => '42',
+            'sexe' => 'homme'];
+
+        $jimmy = [
+            'nom' => 'Jimmy',
+            'age' => '26',
+            'sexe' => 'homme'];
+
+            function afficherPersonnes($n){
+                echo "<p>Nom :".$n['nom']."</p>
+                     <p>Age:".$n['age']."</p>
+                     <p>Sexe :".$n['sexe']."</p>";
+            }
+        afficherPersonnes($guy);
+        afficherPersonnes($jimmy);
+    
+    ?>
+
+    <h1>EXERCICE 13</h1>
+
+    <?php 
+        $gizelle = [
+            'nom' => 'Gizelle',
+            'age' => '63',
+            'sexe' => 'femme'
+        ];
+        $bernadette = [
+            'nom' => 'Bernadette',
+            'age' => '86',
+            'sexe' => 'femme'
+        ]; 
+        
+        $multi = [
+            $guy,$jimmy,$gizelle,$bernadette
+        ];
+
+        foreach($multi as $sale){
+            afficherPersonnes($sale);
+            echo "<p>---------</p>";
+        }
+    ?>
+
+    <h1>EXERCICE 14</h1>
+
+    <?php
+    
+    function moyenne($valeurs){
+        $m=0;
+        $nb=0;
+       foreach($valeurs as $value){
+           $m+=$value;
+           $nb++;
+       }
+       $m=$m/$nb;
+       return $m;
+    }
+    foreach($tableauComplet as $value){
+        afficherPersonnes($value);
+        $moyenne =0;
+        $nb = 0;
+        $Notes = [
+            '1' => rand(1,20),
+            '2' => rand(1,20),
+            '3' => rand(1,20),
+            '4' => rand(1,20)
+        ];
+        foreach ($Notes as $key => $value){
+            echo "Note: $key : $value <br>";
+            
+        } 
+        $moyenne = moyenne($Notes);
+        echo "La moyenne est de : $moyenne <br>";
+        echo '------------------------------<br>';
+    }
+    ?>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
