@@ -96,7 +96,7 @@
        $m=$m/$nb;
        return $m;
     }
-    foreach($tableauComplet as $value){
+    foreach($multi as $value){
         afficherPersonnes($value);
         $moyenne =0;
         $nb = 0;
