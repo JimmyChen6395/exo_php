@@ -79,6 +79,9 @@
     .image > a > p{
         text-align: center;
     }
+
+
+    
 </style>
 
 

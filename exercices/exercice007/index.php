@@ -6,6 +6,7 @@
     } catch (Exception $e) {
         die('Erreur: ' . $e->getMessage());
     };
+
 ?>
 
 <form action="" method="post">
@@ -24,3 +25,17 @@
     </table>
 </form>
 <p>Pas encore inscrit ?... <a href="./inscription.php">S'enregistrer</a></p>
+
+<?php
+    if(isset($_POST["login"]) && isset($_POST["password"])){
+            
+        $login = $_POST["login"];  
+        $password = $_POST["password"];
+
+        $selrecup = $bdd->query("SELECT u.sel 
+                                FROM users u
+                                WHERE login='$login'")
+                                or die(print_r($bdd-> errorInfo()));
+        $sel = $selrecup->fetch();
+    }
+?>
